@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "RolesForm";
+}
+
+<h1>RolesForm</h1>
+
+<form asp-action="GetUsers" asp-controller="Manage">
+    <select class="form-select" asp-items="ViewBag.Roles" name="RoleId">
+        <option>select a role</option>
+    </select>
+    <input  type="submit" value="get user" />
+</form>

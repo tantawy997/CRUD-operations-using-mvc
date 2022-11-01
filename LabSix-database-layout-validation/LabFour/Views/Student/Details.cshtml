@@ -1,0 +1,17 @@
+﻿@model Student
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "student details";
+}
+
+
+
+    <ul>
+        <li>@Model.id</li>
+        <li>@Model.name</li>
+        <li>@Model.age</li>
+        <li>@Model.email</li>
+        <li>@Model.username</li>
+        <li>@Model.Department.DeptName</li>
+    </ul>
+    <a asp-action="Index" class="btn btn-primary">return</a>

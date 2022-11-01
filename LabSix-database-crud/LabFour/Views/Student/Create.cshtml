@@ -1,0 +1,28 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateStudent</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <form method="post">
+        <input asp-for="name" placeholder="name" /><br />
+        <input asp-for="age" placeholder="age" /><br />
+        <input asp-for="email" placeholder="email" /><br />
+        <select asp-for="DeptNo" asp-items="ViewBag.dept">
+            <option>select department</option>
+        </select>
+
+        <input type="submit" value="add" /><br />
+        
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@model Student
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "add student";
+}
+
+
+
+    <form  method="post">
+        <div asp-validation-summary="All"></div>
+    
+        <input asp-for="name" placeholder="name" /><span asp-validation-for="name"> </span>
+        <br />
+    <input asp-for="age" placeholder="age" /><span asp-validation-for="age"></span>
+        <br />
+    <input asp-for="email" placeholder="email" /><span asp-validation-for="email"> </span>
+        <br />
+    <input asp-for="username" placeholder="username" /><span asp-validation-for="username"> </span>
+        <br />
+    <input asp-for="password" placeholder="password" /><span asp-validation-for="password"> </span>
+    <br />
+    <input asp-for="Cpassword" placeholder="Confirm password" /><span asp-validation-for="Cpassword"> </span>
+    <br />
+    <select asp-for="DeptNo" asp-items="ViewBag.dept">
+            <option>select department</option>
+        </select>
+    <span asp-validation-for="DeptNo"></span>
+    
+
+        <input type="submit" value="add" /><br />
+        
+
+    </form>

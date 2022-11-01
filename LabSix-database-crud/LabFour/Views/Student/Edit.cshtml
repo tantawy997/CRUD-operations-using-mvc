@@ -1,0 +1,26 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <form method="post">
+        <input asp-for="name" placeholder="name" />
+        <input asp-for="age" placeholder="age" />
+        <input asp-for="email" placeholder="email"/>
+        <select asp-for="DeptNo" asp-items="ViewBag.dept">
+        </select>
+
+        <input action="Edit" type="submit" value="edit" /><br />
+        <a asp-action="Index" class="btn btn-primary">return</a>
+
+    </form>
+</body>
+</html>

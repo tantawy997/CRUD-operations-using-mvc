@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "GetUsers";
+}
+
+<h1>GetUsers</h1>
+<partial  name="RolesForm" />
+
+<form class="flex-nowrap" asp-action="ChangeUserRoles" asp-controller="Manage">
+    <input type="hidden" name="RoleId" value="@ViewBag.RoleId" />
+    <label>users in role</label><select class="form-select" multiple asp-items="@ViewBag.UserInRole" name="UserToRemove">
+    <option disabled >select a user to remove</option>
+    </select>
+    <br />
+<label>users not in role</label>
+
+    <select class="form-select" multiple asp-items="@ViewBag.UsersNotInRoles" name="UserToAdd">
+    <option disabled >select a user to add</option>
+</select><br />
+<input type="submit" value="change" />
+</form>

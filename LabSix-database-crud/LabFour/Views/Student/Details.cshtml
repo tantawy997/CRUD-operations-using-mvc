@@ -1,0 +1,25 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+
+</head>
+<body>
+    <ul>
+        <li>@Model.id</li>
+        <li>@Model.name</li>
+        <li>@Model.age</li>
+        <li>@Model.email</li>
+        <li>@Model.Department.DeptName</li>
+    </ul>
+    <a asp-action="Index" class="btn btn-primary">return</a>
+</body>
+</html>
